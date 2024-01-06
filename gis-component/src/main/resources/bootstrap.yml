@@ -1,0 +1,27 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: gis
+  cloud:
+    nacos:
+      server-addr: 121.37.213.187:8848
+      # Nacos 注册中心
+      discovery:
+        enabled: true
+        namespace: register-dev
+        group: DEFAULT_GROUP
+        register-enabled: true
+      config:
+        enabled: true
+        file-extension: yaml
+        namespace: dev
+        group: DEFAULT_GROUP
+        extension-configs[0]:
+          data-id: gis-nb.yaml
+          group: DEFAULT_GROUP
+          refresh: true
+black-list:
+  interval-ms: 100000
+  max-times: 20
+#  ban-level: 60,180,720

@@ -1,0 +1,70 @@
+#server:
+#  port: 8081
+#spring:
+#  application:
+#    name: ${APP-NAME}
+#  main:
+#    allow-bean-definition-overriding: true
+#  cloud:
+#    discovery:
+#      enabled: true
+#    nacos:
+#      server-addr: ${NACOS-URL}
+#      username: ${NACOS-USERNAME}
+#      password: ${NACOS-PASSWORD}
+#      # Nacos 注册中心
+#      discovery:
+#        enabled: true
+#        namespace: ${NACOS-REGISTER-NAMESPACE}
+#        group: ${NACOS-GROUP}
+#        register-enabled: true
+#      config:
+#        enabled: true
+#        file-extension: yaml
+#        namespace: ${NACOS-NAMESPACE}
+#        group: ${NACOS-GROUP}
+#        extension-configs[0]:
+#          data-id: ${NACOS-APPLICATION}
+#          group: ${NACOS-GROUP}
+#          refresh: true
+#
+## 同时保留eureka的配置
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#    lease-expiration-duration-in-seconds: 15
+#    lease-renewal-interval-in-seconds: 5
+#  client:
+#    service-url:
+#      defaultZone: ${EUREKA-URL}
+#    registry-fetch-interval-seconds: 5
+#
+#nacos:
+#  server-addr: ${spring.cloud.nacos.server-addr}
+#  username: ${spring.cloud.nacos.username}
+#  password: ${spring.cloud.nacos.password}
+#
+#logging:
+#  level:
+#    org:
+#      atmosphere: warn
+#      springframework:
+#        security: debug
+#        session: debug
+#        jdbc:
+#          core: debug
+#
+##    -DAPP-NAME=tplhk-gis
+##    -DNACOS-URL=nacos.tplhk-app-sit.svc.cluster.local:8848
+##    -DNACOS-USERNAME=deploy
+##    -DNACOS-PASSWORD=Tp!hk@uat1
+##    -DPGSQL_TPLHK_USERNAME=tplhk_ddl_user
+##    -DPGSQL_TPLHK_PASSWORD=UnuQf03M
+##    -DNACOS-NAMESPACE=tplhk-hk-sit
+##    -DNACOS-REGISTER-NAMESPACE=register-sit
+##    -DNACOS-GROUP=SIT_GROUP
+##    -DNACOS-APPLICATION=tplhk-gis.yaml
+##    -Dspring.profiles.active=all
+#
+#
+#

@@ -1,0 +1,37 @@
+#server:
+#  port: 8081
+#spring:
+#  application:
+#    name: gis
+#  cloud:
+#    nacos:
+#      server-addr: nacos.tplhk-app-sit.svc.cluster.local:8848
+#      username: deploy
+#      password: Tp!hk@uat1
+#      # Nacos 注册中心
+#      discovery:
+#        enabled: true
+#        namespace: register-sit
+#        group: SIT_GROUP
+#        register-enabled: true
+#      config:
+#        enabled: true
+#        file-extension: yaml
+#        namespace: tplhk-hk-sit
+#        group: SIT_GROUP
+#        extension-configs[0]:
+#          data-id: tplhk-gis.yaml
+#          group: SIT_GROUP
+#          refresh: true
+#
+#nacos:
+#  server-addr: ${spring.cloud.nacos.server-addr}
+#  username: ${spring.cloud.nacos.username}
+#  password: ${spring.cloud.nacos.password}
+#
+#
+#
+#
+#
+#
+#
